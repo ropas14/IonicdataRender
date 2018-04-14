@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ 
+   <ion-list *ngFor=" let cleanser of facialcleansers">    
+       <ion-item  color="primary" > 
+        <h2 transform-text="uppercase">{{cleanser.category}}</h2>        
+       </ion-item>
+       <ion-item>
+         <a href="{{cleanser.url}}">{{cleanser.brand}}</a>
+       </ion-item> 
+       <ion-item>
+      <p>{{cleanser.ingredients}}</p>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
